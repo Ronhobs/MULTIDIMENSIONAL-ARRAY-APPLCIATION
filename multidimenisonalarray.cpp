@@ -1,49 +1,13 @@
-//Goal
-//Practice using multidimensional arrays.
-//Write a program that will accept values for a 4x4 array
-//and a vector of size 4
-//Use the dot product to multiply the array by the vector.
-//Print the resulting vector.
+//C ++ Program to check whether a number is postive or negative
 #include<iostream>
-using namespace::std;
-int main()
-{
-  //array dimensions must be known at complete time
-  //so I used const int to set the row and col numbers
-  const int row=4;
-  const int col=4;
-  int arr[row][col];
-  int vector[row];
-  int product[row];
-  int sum;
+int main(){
+float number=-80;
 
-  //get the values for the array from the user
-  for(int i=0;i<row;i++)
-  for(int j=0;j<row;j++)
-  {
-    cout<<"arr["<<i<<"]["<<j<<"]=\n";
-    cin>>arr[i][j];
-    //std::cout<<"arr["<<i<<"]["<<j<<"]"="<<arr[i][j]<<"\n";
-
-
-  }
-
-  //get the values for the vector from the user
-  for(int i=0;i<row;i++)
-  {
-    cout<<"vector["<<i<<"]=\n";
-    cin>>vector[i];
-  }
-  sum=0;
-  for(int i=0;i<row;i++){
-    for(int j=0; j<row;j++){
-      sum=(arr[i][j]*vector[i]+sum);
-    }
-    product[i]=sum;
-    sum=0;
-  }
-  for(int i=0;i<row;i++){
-    cout<<"product["<<i<<"]="<<product[i]<<"\n";
-  }
-  return 0;
+if(number>0){
+std::cout<<"The number is positive";
+}
+else{
+std::cout<<"The number is negative";
+}
+return 0;
 }
